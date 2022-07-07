@@ -1,34 +1,25 @@
 <template>
-  <div>
-    <!-- <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/> -->
-    <pot-header></pot-header>
-    <pot-main></pot-main>
-    <pot-footer></pot-footer>
+  <div id="app">
+    <img src="./assets/logo.png">
+    <router-view/>
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-import PotHeader from './components/PotHeader.vue'
-import PotMain from './components/PotMain.vue'
-import PotFooter from './components/PotFooter.vue'
-
-
+import Header from "./components/Header.vue";
+import Footer from "./components/Footer.vue";
 export default {
   name: 'App',
   components: {
-    // HelloWorld,
-    PotHeader,
-    PotMain,
-    PotFooter
+    Header,
+    Footer
   }
 }
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
