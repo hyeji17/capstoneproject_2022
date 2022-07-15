@@ -1,17 +1,31 @@
 <template>
-    <div id = "FooterIcon">
-        <button @click = "find">검색</button>
-        <button @click="chat">채팅</button>
-        <button @click="pod">팟</button>
-        <button @click="MyPage">마이페이지</button>
+<footer>
+    <div class = "FooterBackground">
+    <div id="pod">
+        <button @click = "pod"><img alt="logo" src="../assets/팟.png">
+        </button>
     </div>
+    <div id="mypage">
+        <button @click = "mypage"><img alt="logo" src="../assets/마이페이지.png">
+        </button>
+    </div>
+    <div id="chat">
+        <button @click = "chat"><img alt="logo" src="../assets/채팅.png">
+        </button>
+    </div>
+    <div id="search">
+        <button @click = "search"><img alt="logo" src="../assets/검색.png">
+        </button>
+    </div>
+    </div>
+</footer>
 </template>
 
 <script>
 export default{
     name : 'PotFooter',
     methods: {
-            find(){
+            search(){
 
             },
             chat(){
@@ -20,7 +34,7 @@ export default{
             pod(){
                 
             },
-            MyPage(){
+            mypage(){
 
             }
             ,
@@ -29,14 +43,42 @@ export default{
 </script>
 
 <style scoped>
-.FooterIcon{
-  Font-family: sans-serif;
-  border: 1px solid #eee;
-  border-radius: 2px;
-  padding: 20px 30px;
-  margin-top: 1em;
-  margin-bottom: 40px;
-  user-select: none;
-  overflow-x: auto;
+.FooterBackground{
+position: fixed;
+width: 375px;
+height: 92px;
+left: 0px;
+top: 731px;
+
+background: #FFD260;
+border-radius: 10px;
+}
+#pod{
+position: fixed;
+width: 25px;
+height: 57px;
+left: 215px;
+top: 745px;
+}
+#mypage{
+position: fixed;
+width: 69px;
+height: 61px;
+left: 286px;
+top: 741px;
+}
+#chat{
+position: fixed;
+width: 30px;
+height: 52px;
+left: 121px;
+top: 750px;
+}
+#search{
+position: fixed;
+width: 50px;
+height: 61px;
+left: 20px;
+top: 741px;
 }
 </style>
